@@ -1,0 +1,1245 @@
+                <div class="contact-item">
+                    <h4>🌐 온라인 정보</h4>
+                    <p>웹사이트: www.isonomiabook.com</p>
+                    <p>네이버 검색: "이소노미<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서출판 이소노미아 - 지혜는 널리 공유될수록 좋다</title>
+    <meta name="description" content="자유롭고 공평하며 지배가 없는 출판사. 인류 천재들의 지혜를 현대에 맞게 새롭게 편집하여 전합니다.">
+    <meta name="keywords" content="이소노미아, 출판사, 인문도서, 고전, 철학서, 버지니아울프, 칸트, 굿윌, 기부트렌드, WHY, 소나티네, 휴머니타리안">
+    <meta name="author" content="도서출판 이소노미아">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="도서출판 이소노미아">
+    <meta property="og:description" content="지혜는 널리 공유될수록 좋다">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.isonomiabook.com">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦌</text></svg>">
+    
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2d5016;
+            --accent-color: #b8860b;
+            --accent-light: #daa520;
+            --text-dark: #2d3748;
+            --text-medium: #4a5568;
+            --text-light: #718096;
+            --bg-cream: #faf5f0;
+            --bg-light: #f7fafc;
+            --border-color: #e2e8f0;
+            --shadow-soft: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-medium: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-cream);
+            overflow-x: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* 헤더 */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s ease;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo-beetle {
+            width: 60px;
+            height: 60px;
+            background-image: url('images/이소노미아 로고.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            transform: rotate(-5deg);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .logo:hover .logo-beetle {
+            transform: rotate(0deg) scale(1.1);
+        }
+        
+        .logo-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--accent-light);
+        }
+        
+        /* 메뉴 */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        /* 모바일 메뉴 */
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 6px;
+        }
+        
+        /* 히어로 섹션 */
+        .hero {
+            background: 
+                linear-gradient(135deg, rgba(26,54,93,0.95) 0%, rgba(45,80,22,0.95) 100%),
+                linear-gradient(45deg, var(--bg-cream) 25%, transparent 25%),
+                linear-gradient(-45deg, var(--bg-cream) 25%, transparent 25%);
+            background-size: 100% 100%, 60px 60px, 60px 60px;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent-color), var(--accent-light));
+            color: white;
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(184, 134, 11, 0.4);
+            background: linear-gradient(45deg, var(--accent-light), #ffd700);
+        }
+        
+        /* 섹션 공통 스타일 */
+        .section {
+            padding: 5rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--primary-color);
+            position: relative;
+            font-weight: 400;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+            border-radius: 2px;
+        }
+        
+        /* 최신 도서 섹션 */
+        .featured-section {
+            background: white;
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-color);
+        }
+        
+        .featured-books {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .featured-book {
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .featured-book::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+        }
+        
+        .featured-book:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--accent-light);
+        }
+        
+        /* 도서 표지 스타일 */
+        .book-cover {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            border-radius: 8px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: contain;
+        }
+        
+        .book-cover::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,0,0,0.1) 100%);
+            pointer-events: none;
+        }
+        
+        .featured-book:hover .book-cover {
+            transform: scale(1.05) rotateY(5deg);
+        }
+        
+        .book-info h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .book-author {
+            color: var(--text-medium);
+            margin-bottom: 1.2rem;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        .book-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        /* 인류 천재들의 지혜 시리즈 */
+        .wisdom-series {
+            background: var(--bg-light);
+            padding: 5rem 0;
+            margin: 4rem 0;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .book-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .book-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .book-card .book-cover {
+            width: 140px;
+            height: 140px;
+            font-size: 1rem;
+        }
+        
+        .book-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .book-card .book-author {
+            color: var(--text-medium);
+            margin-bottom: 1.2rem;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        .book-card .book-description {
+            color: var(--text-medium);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        /* 회사 소개 섹션 */
+        .about-section {
+            background: white;
+            padding: 5rem 0;
+            margin: 4rem 0;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-weight: 400;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #2d3748 !important;
+        }
+        
+        .about-text strong {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .mission-boxes {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .mission-box {
+            background: var(--bg-cream);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .mission-box:hover {
+            transform: translateX(5px);
+        }
+        
+        .mission-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .mission-box p {
+            color: #2d3748 !important;
+            line-height: 1.7;
+        }
+        
+        /* 기부 활동 섹션 */
+        .donation-section {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+            color: white;
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .donation-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .donation-section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+        
+        .donation-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        /* 연락처 섹션 */
+        .contact-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .contact-item h4 {
+            color: var(--accent-light);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .contact-item p, .contact-item a {
+            color: rgba(255,255,255,0.95);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--accent-light);
+        }
+        
+        /* 뉴스 섹션 */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .news-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        /* 푸터 */
+        footer {
+            background: #1a202c;
+            color: rgba(255,255,255,0.8);
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-light);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        /* 반응형 디자인 */
+        @media (max-width: 1024px) {
+            .featured-books {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+            
+            nav {
+                width: 100%;
+                order: 3;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+            }
+            
+            nav a {
+                text-align: center;
+                width: 100%;
+            }
+            
+            .hero {
+                min-height: 60vh;
+                padding: 2rem 0;
+            }
+            
+            .books-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            
+            .featured-books {
+                grid-template-columns: 1fr;
+            }
+            
+            .book-cover {
+                width: 160px;
+                height: 160px;
+            }
+            
+            .book-card .book-cover {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .featured-book, .book-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* 스크롤 애니메이션 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 스크롤바 디자인 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg-cream);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-light);
+        }
+        
+        /* 접근성 */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        *:focus {
+            outline: 2px solid var(--accent-light);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">
+                    <div class="logo-beetle"></div>
+                    <div class="logo-text">
+                        <h1>이소노미아</h1>
+                        <div class="tagline">지혜는 널리 공유될수록 좋다</div>
+                    </div>
+                </a>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">☰</button>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#home">홈</a></li>
+                        <li><a href="#about">출판사 소개</a></li>
+                        <li><a href="#books">도서 목록</a></li>
+                        <li><a href="#news">책 소식</a></li>
+                        <li><a href="#contact">연락처</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>자유롭고 공평하며<br>지배가 없는 출판사</h2>
+                    <p>인류 천재들의 지혜를 현대에 맞게 새롭게 편집하여 전합니다.<br>이소노미아는 그리스어에서 '지배가 없는 상태'를 의미합니다.</p>
+                    <a href="#books" class="cta-button">도서 둘러보기 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 최신 출간 도서 섹션 삭제 -->
+
+        <!-- 인류 천재들의 지혜 시리즈 -->
+        <section class="wisdom-series" id="books">
+            <div class="container">
+                <h3 class="section-title">인류 천재들의 지혜 시리즈</h3>
+                <p style="text-align: center; color: var(--text-medium); font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    인류의 정신세계사에 큰 영향을 미친 천재들의 지혜를 현대 독자가 쉽게 접할 수 있도록 새롭게 편집했습니다.
+                </p>
+                <div class="books-grid">
+                    <div class="book-card fade-in">
+                        <img src="images/WHY 공식.jpeg" alt="WHY 표지" class="book-cover">
+                        <h4>WHY</h4>
+                        <p class="book-author">버지니아 울프</p>
+                        <p class="book-description">버지니아 울프의 소설과 산문을 모은 작품집. 여성의 시각에서 바라본 문학과 삶에 대한 깊이 있는 성찰을 담았습니다.</p>
+                    </div>
+                    <div class="book-card fade-in">
+                        <img src="images/굿윌 공식.jpeg" alt="굿윌 표지" class="book-cover">
+                        <h4>굿윌</h4>
+                        <p class="book-author">칸트</p>
+                        <p class="book-description">칸트의 '도덕형이상학의 기초'를 현대적으로 재편집. '선한 의지'의 개념을 직관적으로 이해할 수 있게 구성했습니다.</p>
+                    </div>
+                    <div class="book-card fade-in">
+                        <img src="images/타인의 행복 공식.jpeg" alt="타인의 행복 표지" class="book-cover">
+                        <h4>타인의 행복</h4>
+                        <p class="book-author">존 스튜어트 밀</p>
+                        <p class="book-description">존 스튜어트 밀의 공리주의 철학을 담은 작품. 개인의 행복과 사회 전체의 행복 사이의 관계를 탐구합니다.</p>
+                    </div>
+                    <div class="book-card fade-in">
+                        <img src="images/최면술사 공식.jpeg" alt="최면술사 표지" class="book-cover">
+                        <h4>최면술사</h4>
+                        <p class="book-author">마크 트웨인</p>
+                        <p class="book-description">마크 트웨인의 산문과 단편을 모은 작품집. 유머와 풍자를 통해 인간 본성의 모순을 날카롭게 관찰합니다.</p>
+                    </div>
+                    <div class="book-card fade-in">
+                        <img src="images/소나티네 공식.jpeg" alt="소나티네 표지" class="book-cover">
+                        <h4>소나티네</h4>
+                        <p class="book-author">나쓰메 소세키</p>
+                        <p class="book-description">나쓰메 소세키의 대표작들을 새롭게 편집. 일본 근대문학의 정수를 현대 독자들에게 전합니다.</p>
+                    </div>
+                    <div class="book-card fade-in">
+                        <img src="images/휴머니타리안 공식.jpeg" alt="휴머니타리안 표지" class="book-cover">
+                        <h4>휴머니타리안</h4>
+                        <p class="book-author">앙리 뒤앙</p>
+                        <p class="book-description">솔페리노 전투의 참상을 목격한 앙리 뒤앙의 회상록. 적십자 탄생의 배경이 된 인도주의 정신을 담았습니다.</p>
+                    </div>
+                    <div class="book-card fade-in">
+                        <img src="images/무너져 내리다 공식.jpeg" alt="무너져 내리다 표지" class="book-cover">
+                        <h4>무너져 내리다</h4>
+                        <p class="book-author">스콧 피츠제럴드</p>
+                        <p class="book-description">피츠제럴드의 자전적 에세이와 단편소설을 모은 작품집. 좌절과 희망, 인간의 내면을 탁월한 문체로 그려낸 명작입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 추가 출간 도서 -->
+        <section class="section">
+            <div class="container">
+                <div class="featured-section">
+                    <h3 class="section-title">추가 출간 도서</h3>
+                    <div class="books-grid">
+                        <div class="book-card fade-in">
+                            <img src="images/스물여섯 캐나다 영주 공식.jpeg" alt="스물여섯 캐나다 영주 표지" class="book-cover">
+                            <h4>스물여섯 캐나다 영주</h4>
+                            <p class="book-author">그레이스</p>
+                            <p class="book-description">인생에는 플랜 B가 필요해! 어떤 생은 잘못되고 지쳐 다른 삶을 준비해 보세요.</p>
+                        </div>
+                        <div class="book-card fade-in">
+                            <img src="images/수상록 공식.jpeg" alt="수상록 표지" class="book-cover">
+                            <h4>수상록</h4>
+                            <p class="book-author">정세균</p>
+                            <p class="book-description">생각과 감정의 흐름을 담은 수상록으로, 일상 속 깊이 있는 성찰을 제공합니다.</p>
+                        </div>
+                        <div class="book-card fade-in">
+                            <img src="images/아오지까지 공식.jpeg" alt="아오지까지 표지" class="book-cover">
+                            <h4>아오지까지</h4>
+                            <p class="book-author">조경일</p>
+                            <p class="book-description">세 번의 탈북 끝에 대한민국으로 정착한 조경일 씨의 생애를 담은 감동적인 체험담. 남과 북을 모두 경험한 청년이 한국 사회에서 마주하는 문제들과 그 가운데 꽃피우는 희망을 그렸습니다.</p>
+                        </div>
+                        <div class="book-card fade-in">
+                            <img src="images/여성의종속 공식.png" alt="여성의 종속 표지" class="book-cover">
+                            <h4>여성의 종속</h4>
+                            <p class="book-author">존 스튜어트 밀</p>
+                            <p class="book-description">19세기 자유주의적 페미니즘의 대표작. 여성이 남성에게 법적으로 종속되는 현실의 불합리함을 밝히고, 여성의 해방이 인류에게 주는 이로움을 논리적으로 설명한 명저입니다.</p>
+                        </div>
+                        <div class="book-card fade-in">
+                            <img src="images/웃음 공식.jpeg" alt="웃음 표지" class="book-cover">
+                            <h4>웃음</h4>
+                            <p class="book-author">앙리 베르그송</p>
+                            <p class="book-description">무엇이 우리를 웃게 하는가? 웃음의 철학적 의미에 대한 깊이 있는 탐구입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 기부 활동 섹션 삭제 -->
+
+        <!-- 출판사 소개 -->
+        <section class="about-section fade-in" id="about">
+            <div class="container">
+                <h3 class="section-title">출판사 소개</h3>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>이소노미아란?</h3>
+                        <p>이소노미아(isonomia)는 그리스어에서 <strong>'지배가 없는 상태'</strong>를 의미합니다. 2017년 설립된 젊은 출판사로, 구명진 대표(마담쿠)와 정우성 편집장(코디정)이 함께 이끌고 있습니다.</p>
+                        <p><strong>"지혜는 널리 공유될수록 좋다"</strong>는 기치 아래, 인류의 정신세계사에 큰 영향을 미친 천재들의 지혜를 현대 독자들이 쉽게 접할 수 있도록 새롭게 편집하여 제공합니다.</p>
+                        <p>독자들은 책 앞에서 누구나 평등한 존재라는 믿음으로, <strong>자유롭고 공평하며 지배가 없는 출판 시스템</strong>을 만들어가고 있습니다.</p>
+                    </div>
+                    <div class="mission-boxes">
+                        <div class="mission-box">
+                            <h4>📚 출판 철학</h4>
+                            <p>웹보다 정확하며 풍부한 자료 제공이 어렵다면, 독자가 쉽게 얻을 수 없는 내용을 전하는 것이 좋다고 생각합니다. 시대가 바뀌면 그에 적합한 형식도 바뀌어야 합니다.</p>
+                        </div>
+                        <div class="mission-box">
+                            <h4>✨ 편집 원칙</h4>
+                            <p>이해하기 쉽게 번역하고 의미가 명확히 드러나도록 편집합니다. 본업이 아니기 때문에 오히려 틀에 갇히지 않은 자유로운 작업이 가능합니다.</p>
+                        </div>
+                        <div class="mission-box">
+                            <h4>🦌 브랜드 스토리</h4>
+                            <p>이소노미아의 로고는 편집장님의 어린 아들 정세진 어린이가 그린 사슴벌레입니다. 삐뚤빼뚤하지만 정성이 담긴 그림이 우리의 진정성을 보여줍니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 책 소식 -->
+        <section class="section fade-in" id="news">
+            <div class="container">
+                <div class="featured-section">
+                    <h3 class="section-title">책 소식</h3>
+                    <div class="news-grid">
+                        <article class="news-card" style="border-left: 4px solid #d63384;">
+                            <div style="color: #d63384; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem;">2025.01.22</div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.3rem;">기부트렌드 2025 출간</h4>
+                            <p style="color: var(--text-medium); line-height: 1.6;">효율과 낭만, 기부 감각을 깨우는 여섯 가지 기부트렌드를 담은 한정판 도서가 출간되었습니다. 사회복지공동모금회와 함께 제작한 특별한 작품입니다.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 연락처 -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h3 class="section-title" style="color: white;">연락처</h3>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>🏢 회사 정보</h4>
+                    <p>도서출판 이소노미아</p>
+                    <p>설립: 2017년</p>
+                    <p>대표: 구명진 (마담쿠)</p>
+                    <p>편집장: 정우성 (코디정)</p>
+                    <p>업종: 일반 서적 출판업</p>
+                    <p>주소: 서울특별시 종로구 율곡로2길 7, 서머셋팰리스 303호</p>
+                </div>
+                <div class="contact-item">
+                    <h4>🌐 온라인 정보</h4>
+                    <p>인스타그램: @isonomia6</p>
+                </div>
+                <div class="contact-item">
+                    <h4>📚 도서 구매처</h4>
+                    <p><a href="https://www.aladin.co.kr/search/wsearchresult.aspx?SearchTarget=All&SearchWord=이소노미아" target="_blank">알라딘</a></p>
+                    <p><a href="https://search.kyobobook.co.kr/search?keyword=%EC%9D%B4%EC%86%8C%EB%85%B8%EB%AF%B8%EC%95%84&gbCode=TOT&target=total" target="_blank">교보문고</a></p>
+                    <p><a href="https://www.yes24.com/Product/Search?domain=ALL&query=이소노미아" target="_blank">YES24</a></p>
+                    <p><a href="https://www.coupang.com/np/search?q=이소노미아" target="_blank">쿠팡</a></p>
+                </div>
+                <div class="contact-item">
+                    <h4>💌 문의사항</h4>
+                    <p>도서 출간 문의</p>
+                    <p>언론 보도 문의</p>
+                    <p>기타 문의사항</p>
+                    <p>h.ku@isonomiabook.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 도서출판 이소노미아. All rights reserved.</p>
+                <p>로고 디자인: 정세진 어린이 | 웹사이트: 반응형 디자인</p>
+                <p>본 웹사이트는 이소노미아의 모든 출간 도서와 철학을 담았습니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 부드러운 스크롤
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 스크롤 애니메이션
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 헤더 스크롤 효과
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateHeader() {
+            const header = document.getElementById('header');
+            const scrollY = window.scrollY;
+            
+            if (scrollY > 100) {
+                header.style.background = 'rgba(26, 54, 93, 0.95)';
+                header.style.backdropFilter = 'blur(15px)';
+                header.style.padding = '0.8rem 0';
+            } else {
+                header.style.background = 'linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)';
+                header.style.backdropFilter = 'none';
+                header.style.padding = '1.2rem 0';
+            }
+            
+            lastScrollY = scrollY;
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick);
+
+        // 모바일 메뉴 토글
+        function toggleMobileMenu() {
+            const nav = document.getElementById('nav');
+            const btn = document.querySelector('.mobile-menu-btn');
+            const isVisible = nav.style.display === 'block';
+            
+            if (isVisible) {
+                nav.style.display = 'none';
+                btn.innerHTML = '☰';
+                btn.setAttribute('aria-label', '메뉴 열기');
+            } else {
+                nav.style.display = 'block';
+                btn.innerHTML = '✕';
+                btn.setAttribute('aria-label', '메뉴 닫기');
+            }
+        }
+
+        // 반응형 메뉴 초기화
+        function initResponsiveMenu() {
+            const nav = document.getElementById('nav');
+            const btn = document.querySelector('.mobile-menu-btn');
+            
+            if (window.innerWidth <= 768) {
+                nav.style.display = 'none';
+                btn.innerHTML = '☰';
+            } else {
+                nav.style.display = 'block';
+                btn.innerHTML = '☰';
+            }
+        }
+
+        // 창 크기 변경시 메뉴 초기화
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(initResponsiveMenu, 250);
+        });
+
+        // 초기화
+        window.addEventListener('load', () => {
+            initResponsiveMenu();
+            document.body.style.opacity = '1';
+            
+            // 로고 애니메이션
+            setTimeout(() => {
+                document.querySelector('.logo-beetle').style.transform = 'rotate(0deg)';
+            }, 500);
+        });
+
+        // 키보드 접근성
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const nav = document.getElementById('nav');
+                if (window.innerWidth <= 768 && nav.style.display === 'block') {
+                    toggleMobileMenu();
+                }
+            }
+        });
+
+        // 도서 카드 터치 지원
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.book-card, .featured-book').forEach(card => {
+                card.addEventListener('touchstart', function(e) {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                }, { passive: true });
+                
+                card.addEventListener('touchend', function(e) {
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                }, { passive: true });
+            });
+        }
+
+        // 외부 링크 보안
+        document.querySelectorAll('a[href^="http"]').forEach(link => {
+            if (!link.hostname.includes('isonomiabook.com')) {
+                link.setAttribute('rel', 'noopener noreferrer');
+            }
+        });
+
+        // 에러 처리
+        window.addEventListener('error', (e) => {
+            console.warn('리소스 로딩 오류:', e.filename, e.lineno);
+        });
+    </script>
+
+    <!-- 구조화된 데이터 (SEO 최적화) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "도서출판 이소노미아",
+        "alternateName": "이소노미아",
+        "description": "자유롭고 공평하며 지배가 없는 출판사. 인류 천재들의 지혜를 현대에 맞게 새롭게 편집하여 전합니다.",
+        "url": "https://www.isonomiabook.com",
+        "foundingDate": "2017",
+        "foundingLocation": "대한민국",
+        "founder": [
+            {
+                "@type": "Person",
+                "name": "구혜미",
+                "jobTitle": "대표"
+            },
+            {
+                "@type": "Person",
+                "name": "정우성",
+                "jobTitle": "편집장"
+            }
+        ],
+        "slogan": "지혜는 널리 공유될수록 좋다",
+        "industry": "출판업",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "KR"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "출간 도서",
+            "itemListElement": [
+                {
+                    "@type": "Book",
+                    "name": "기부트렌드 2025",
+                    "author": "사회복지공동모금회 외",
+                    "publisher": "이소노미아",
+                    "datePublished": "2025-01-22",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "9000",
+                        "priceCurrency": "KRW"
+                    }
+                },
+                {
+                    "@type": "Book",
+                    "name": "변리사, 새로운 이야기",
+                    "author": "특허법인 임앤정",
+                    "publisher": "이소노미아",
+                    "datePublished": "2018-01-03"
+                },
+                {
+                    "@type": "Book",
+                    "name": "WHY",
+                    "author": "버지니아 울프",
+                    "publisher": "이소노미아",
+                    "genre": "문학"
+                },
+                {
+                    "@type": "Book",
+                    "name": "굿윌",
+                    "author": "칸트",
+                    "publisher": "이소노미아",
+                    "genre": "철학"
+                },
+                {
+                    "@type": "Book",
+                    "name": "타인의 행복",
+                    "author": "존 스튜어트 밀",
+                    "publisher": "이소노미아",
+                    "genre": "철학"
+                },
+                {
+                    "@type": "Book",
+                    "name": "최면술사",
+                    "author": "마크 트웨인",
+                    "publisher": "이소노미아",
+                    "genre": "문학"
+                },
+                {
+                    "@type": "Book",
+                    "name": "소나티네",
+                    "author": "나쓰메 소세키",
+                    "publisher": "이소노미아",
+                    "genre": "문학"
+                },
+                {
+                    "@type": "Book",
+                    "name": "휴머니타리안",
+                    "author": "앙리 뒤앙",
+                    "publisher": "이소노미아",
+                    "genre": "역사"
+                },
+                {
+                    "@type": "Book",
+                    "name": "스물여섯 캐나다 영주",
+                    "author": "그레이스",
+                    "publisher": "이소노미아"
+                },
+                {
+                    "@type": "Book",
+                    "name": "수상록",
+                    "author": "정우빈 에이미",
+                    "publisher": "이소노미아"
+                },
+                {
+                    "@type": "Book",
+                    "name": "아오지까지",
+                    "author": "조정인",
+                    "publisher": "이소노미아"
+                },
+                {
+                    "@type": "Book",
+                    "name": "여성의 중독",
+                    "author": "노력과 노숙의 분별기",
+                    "publisher": "이소노미아"
+                },
+                {
+                    "@type": "Book",
+                    "name": "웃음",
+                    "author": "앙리 베르그송",
+                    "publisher": "이소노미아",
+                    "genre": "철학"
+                }
+            ]
+        }
+    }
+    </script>
+</body>
+</html>
